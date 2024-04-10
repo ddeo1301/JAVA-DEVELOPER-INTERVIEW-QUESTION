@@ -26,15 +26,57 @@ IMUTABLE STRING :- string in java are immutable, which means once a string objec
 
 str.contains("Divyanshu")    str.startsWith("Div")    str.endsWith("Div")
 String name = str.replace('o', 'a')        char[] ch = str.toCharArray()
-String str = String.valueOf(23);  converts diff data type(int, long, float, double, boolean, char, charArray, object) into string representation
+String str = String.valueOf(23);  converts diff data type(int, long, float, double, boolean, char, charArray, object)     into string representation
 isEmpty() :- checks if string is empty(length is 0)
 isBlank() :- checks if string is blank(empty or contains only white space characters)
 
-EXCEPTION :- In java, Exception is an unexpected event, which occurs during the execution of a program i.e at runtime, that disrupts the normal flow of the program's instruction. Exception can be caught and handled by the program.
-It occurs due to :- 1) Invalid user input  2) Device failure  3) Loss of network connections 4)Physical limitations 5)Code Errors 6)Opening an available files
 
-RUNTIME EXCEPTIONS :- It happens due to programming errors aka unchecked exceptions
-RuntimeException is the superclass of all classes that exceptions are thrown during the normal exception of Java VM(virtual machine). The Runtime Exception and its subclasses are unchecked exceptions. The most common exceptions are NullPointerException, ArrayIndexOfBoundExceptions, classCastExceptions, InvalidArgumentExceptionException etc.
+    String ats = Arrays.toString(digits);   // array to string 
+    int val = Integer.parseInt(ats.replace("[", "").replace("]", "").replace(",", "").replace(" ", "")); // string to int
+    String sti = String.valueOf(val);  
+        int[] ans = new int[sti.length()];
+        
+        for (int i = 0; i < ans.length; i++) {
+            ans[i] = Character.getNumericValue(sti.charAt(i));
+        }
 
-JAVA IOException exceptions :- is a checked exceptions that must be handled at compilation time. IOException is the base class for such exceptions which are thrown while accessing data from files, directories and streams. It represent a class or exceptions that are thrown when an I/O error occurs
 
+
+
+
+WRAPPER CLASS in java are used to convert primitive types (int, char, float) into corresponding objects
+
+NEED OF WRAPPER CLASS :- 
+   1) The classes in java.util packages handles only objects and hence wrapper classes help in this case also
+   2) Data Structure in the collections framework, such as ArrayList and Vector, store only objects(reference types) and not primitive types
+   3) An object is needed to support synchronization in multithreading
+
+package Wrapper;
+
+public class LearnWrapper {
+    public static void main(String[] args) {
+        // primitive type -> OBJECT  (AUTOBOXING)
+        int num = 5;
+        // let convert int into object
+        Integer n = Integer.valueOf(num + 1); // 6
+        Integer m = Integer.valueOf(8 );  // 8
+        System.out.println(n);
+        System.out.println(m);
+        Integer n1 = num;
+        System.out.println(n1 + 2); // 7
+        // This is only called autoboxing that how we applied box of wrapper class above primitive
+
+
+        // WRAPPER OBJECT INTO PRIMITIVE TYPES   (UNBOXING)
+        Integer number = 50;
+        // let convert integer object into int
+        if(number instanceof Integer){
+            System.out.println("Yes it is Integer object");  // Yes it is Integer object
+        }
+        // wrapper object -> number is ready
+
+        // let's convert it into a primitive type
+        int num1 = number;  // number.isValue()
+        System.out.println(num1+4);  // 54
+    }
+}
