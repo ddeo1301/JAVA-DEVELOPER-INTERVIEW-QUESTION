@@ -1,0 +1,4 @@
+DSA 
+------
+
+SUBMATRIX :- add 1st row subarray and then column subarray
