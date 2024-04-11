@@ -1,5 +1,5 @@
 DEFINATION
-   Encapsulation binds data and methods in a class. Like a capsule, it combines and binds them together.
+   Encapsulation binds data(attributes) and methods(behaviour) in a class. Like a capsule, it combines and binds them together.
    As we are hiding data from outer classes or world, ENCAPSULATION is also known as DATA HIDING
 
 The goal is to implement classes in a way that prevents unauthorized access to or modification of the original contents of a class by its instances(or objects).  The underlying algorithms of one class need not be known to another class.  The two classes can still communicate through.
