@@ -20,10 +20,12 @@ POLYMORPHISM :- MANY FORMS
                     }
 
             2) operator overloading :-
-                 Java doesnot support user defined operator overloading but internally overloas certain operator(e.g :- + for string concatenation and integer addition)
+                 Java doesnot support user defined operator overloading but internally overloas certain operator(e.g :- + for string concatenation and integer addition).
+                 eg :- 1) int, int  2) int, double  3) str1 , str2
+                 + operator in java in polymorphic but we cannot overload it by ourself it is done whatever java has given 
 
 
-        2) Run Time polymorphism
+        2) Run Time polymorphism / Dynamic Polymorphism
               1)  Function overloading :-
                       A subclass can provide a specific implementation of a method that is already defined in its superclass
                2) Dynamic Method Dispatch[Upcasting] :- A superclass references variable can refer to a subclass object and dynamic dispatch is used to resolve the called method at runtime
