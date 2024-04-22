@@ -2,6 +2,7 @@ Q1 - explain oops concept and how do we acheive / implement each oops concept us
 
 OBJECT :- are instance of classs that has state and behaviour 
 CLASS :- are blueprint from which we can create individual objects. Class doesn't consume any space
+
 public class Main{
     int x = 5;
     public static void main(String[] args){
@@ -49,6 +50,7 @@ public class Main {
         c.print_geek();
     }
 }
+
 1) interfaces cannot be used to create objects
 2) Interface methods do not have a body - the body is provided by the "implement" class
 3) On implementation of an interface, you must override all of its methods
@@ -81,6 +83,7 @@ abstract keyword is a non-access modifier, used for classes and methods:
 Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
 Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
 An abstract class can have both abstract and regular methods:
+
 // Abstract class
 abstract class Animal {
   // Abstract method (does not have a body)
@@ -129,7 +132,8 @@ class Circle implements Drawable {
 
 
 
-3) ENCAPSULATION :- Binding (or wrapping) code and data together into a single unit are known as encapsulation. 
+3) ENCAPSULATION :- Binding (or wrapping) code and data together into a single unit are known as encapsulation.
+
 public class Person {
   private String name; // private = restricted access
   // Getter :- get method returns the value of the variable name.
@@ -156,6 +160,7 @@ public class Main {
 
 
 4) POLYMORPHISM :- If one task is performed in different ways, it is known as polymorphism. 
+
 // Implementation in Java (Method Overriding OR runtime polymorphism):
 public class Animal {
     public void makeSound() {
@@ -178,8 +183,7 @@ public class Calculator {
         return a + b;
     }
 }
-
-// 
+ 
 class Animal {
   public void animalSound() {
     System.out.println("The animal makes a sound");
@@ -218,10 +222,12 @@ class Main {
 Q2 - Explain static keyword and how does the execution of static block/variable/method
  
  static keyword is used for a constant variable or a method that is the same for every instance of a class. This means that static members are shared among all instances of the class, and they can be accessed without creating objects.
+
 STATIC BLOCK
   - Static blocks are used to initialize static variables.
   - They are executed only once when the class is loaded into the memory by the JVM.
   - Static blocks are executed in the order they appear in the class, from top to bottom.
+
   public class Example {
     static {
         System.out.println("Static block");
@@ -232,6 +238,7 @@ STATIC VARIABLE
   - Static variables (also known as class variables) are shared among all instances of the class.
   - They are initialized only once, at the start of the program's execution, and retain their values 
      until the program terminates.
+
      public class Example {
         static int count = 0; // static variable
      }
@@ -242,9 +249,10 @@ STATIC METHOD
   - They can be called directly using the class name without creating an instance of the class.
   - Static methods cannot access instance variables directly, as they are not associated with any 
      instance of the class.
+
     public class Example {
-    static void display() { // static method
+      static void display() { // static method
         System.out.println("Static method");
-    }
-}
+     }
+  }
  
