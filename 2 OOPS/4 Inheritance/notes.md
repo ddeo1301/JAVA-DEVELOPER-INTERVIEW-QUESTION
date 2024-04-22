@@ -19,6 +19,7 @@ IMPLEMENTING INHERITANCE IN JAVA
     class SuperClass{
        // SuperClass fields and methods
     }
+
     class SubClass extends SuperClass{
       // SUbclass fields and methods, it includes those inherited from SuperClass
     }
@@ -50,45 +51,45 @@ PROTECTED MEMBERS :-
 
 
 
-class Vehicle {
-    Vehicle() {
-        System.out.println("Vehicle constructor called");
-    }
-}
+                  class Vehicle {
+                      Vehicle() {
+                          System.out.println("Vehicle constructor called");
+                      }
+                  }
 
-class Car extends Vehicle {
-    Car() {
-        System.out.println("Car constructor called");
-    }
-}
+                  class Car extends Vehicle {
+                      Car() {
+                          System.out.println("Car constructor called");
+                      }
+                  }
 
-class Maruti extends Car {
-    Maruti() {
-        System.out.println("Maruti constructor called");
-    }
-}
+                  class Maruti extends Car {
+                      Maruti() {
+                          System.out.println("Maruti constructor called");
+                      }
+                  }
 
-public class Main {
-    public static void main(String[] args) {
-        Vehicle v1 = new Vehicle();
-        // Output: Vehicle constructor called
+                  public class Main {
+                      public static void main(String[] args) {
+                          Vehicle v1 = new Vehicle();
+                          // Output: Vehicle constructor called
 
-        System.out.println();
+                          System.out.println();
 
-        Car c1 = new Car();
-        // Output:
-        // Vehicle constructor called
-        // Car constructor called
+                          Car c1 = new Car();
+                          // Output:
+                          // Vehicle constructor called
+                          // Car constructor called
 
-        System.out.println();
+                          System.out.println();
 
-        Maruti m1 = new Maruti();
-        // Output:
-        // Vehicle constructor called
-        // Car constructor called
-        // Maruti constructor called
-    }
-}
+                          Maruti m1 = new Maruti();
+                          // Output:
+                          // Vehicle constructor called
+                          // Car constructor called
+                          // Maruti constructor called
+                      }
+                  }
 
 Explanation:
 
