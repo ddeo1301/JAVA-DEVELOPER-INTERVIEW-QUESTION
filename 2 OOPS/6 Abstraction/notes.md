@@ -34,3 +34,7 @@ ADVANTAGES OF ABSTRACTION
  3) Increase Reusablity
  4) AVoid Code Duplication
  5) Loose Coupling 
+
+
+In abstraction we seperate interface from implementation so that if we want to add new implementation
+we can use interface

@@ -27,20 +27,28 @@ public class Order {
         }
         return total;
     }
+    
 
+    // In abstraction we seperate interface from implementation so that if we want to add new implementation
+    // we can use interface
     public void pay(String paymentType, String securityCode) {  // yeh payment wla yha nhi hna chaiye blki ise payment
         //  wle class m hna chaiye
         if ("debit".equals(paymentType)) {
             System.out.println("Processing debit payment type");
             System.out.println("Verifying security code: " + securityCode);
             status = "paid";
-        } else if ("credit".equals(paymentType)) {
+        } else if ("credit".equals(paymentType)) { // yeh OCP principle violate kr rha as we cant modify existing code
+            // we can only add new functionality
             System.out.println("Processing credit payment type");
             System.out.println("Verifying security code: " + securityCode);
             status = "paid";
         } else {
             throw new RuntimeException("Unknown payment type: " + paymentType);
         }
+        // if else tree case hga aur bymistake intern or anyone can do something wrong in the method so make diff 
+        // payment method
+        // this may violate SRP as debit , credit and upi have diff issues so we should write it in diff method 
+
     }
 
     public static void main(String[] args) {
