@@ -28,7 +28,8 @@ public class Order {
         return total;
     }
 
-    public void pay(String paymentType, String securityCode) {
+    public void pay(String paymentType, String securityCode) {  // yeh payment wla yha nhi hna chaiye blki ise payment
+        //  wle class m hna chaiye
         if ("debit".equals(paymentType)) {
             System.out.println("Processing debit payment type");
             System.out.println("Verifying security code: " + securityCode);

@@ -68,23 +68,23 @@ class UPIPaymentProcessor implements PaymentProcessor {
     }
 }
 
-// class PaymentProcessor {
-// public void pay(Order order, String securityCode, String paymentType) {
-// if ("debit".equals(paymentType)) {
-// System.out.println("Processing debit payment type");
-// System.out.println("Verifying security code: " + securityCode);
-// order.setStatus("paid");
-// } else if ("credit".equals(paymentType)) {
-// System.out.println("Processing credit payment type");
-// System.out.println("Verifying nkjfnks security code: " + securityCode);
-// order.setStatus("paid");
-// } else if ("UPI".equals(paymentType)) {
-// System.out.println("Processing UPI payment type");
-// System.out.println("Verifying security code: " + securityCode);
-// order.setStatus("paid");
-// }
-// }
-// }
+class PaymentProcessor {
+    public void pay(Order order, String securityCode, String paymentType) {
+        if ("debit".equals(paymentType)) {
+            System.out.println("Processing debit payment type");
+            System.out.println("Verifying security code: " + securityCode);
+            order.setStatus("paid");
+        } else if ("credit".equals(paymentType)) {
+            System.out.println("Processing credit payment type");
+            System.out.println("Verifying nkjfnks security code: " + securityCode);
+            order.setStatus("paid");
+        } else if ("UPI".equals(paymentType)) {
+            System.out.println("Processing UPI payment type");
+            System.out.println("Verifying security code: " + securityCode);
+            order.setStatus("paid");
+        }
+    }
+}
 
 class Main {
     public static void main(String[] args) {
