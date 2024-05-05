@@ -3,13 +3,13 @@ Q1 - explain oops concept and how do we acheive / implement each oops concept us
 OBJECT :- are instance of classs that has state and behaviour 
 CLASS :- are blueprint from which we can create individual objects. Class doesn't consume any space
 
-public class Main{
-    int x = 5;
-    public static void main(String[] args){
-        Main obj = new Main();
-        System.out.println(obj.x);  // modify attribute value
-    }
-}
+      public class Main{
+          int x = 5;
+          public static void main(String[] args){
+              Main obj = new Main();
+              System.out.println(obj.x);  // modify attribute value
+          }
+      }
 
 PILLARS OF OOPS
 1) INHERITANCE :- when one object acquires all the properties and behaviours of parent object. provides code reusablity
@@ -24,32 +24,32 @@ PILLARS OF OOPS
   - we cannot declare an interface directly as a variable type, but you can use interfaces as reference 
      types for variables
 
-interface One {
-    public void print_geek();
-}
-interface Two {
-    public void print_for();
-}
-interface Three extends One, Two {
-    public void print_geek();
-}
-class Child implements Three {
-    @Override public void print_geek()
-    {
-        System.out.println("Geeks");
-    }
- 
-    public void print_for() { System.out.println("for"); }
-}
-public class Main {
-    public static void main(String[] args)
-    {
-        Child c = new Child();
-        c.print_geek();
-        c.print_for();
-        c.print_geek();
-    }
-}
+      interface One {
+          public void print_geek();
+      }
+      interface Two {
+          public void print_for();
+      }
+      interface Three extends One, Two {
+          public void print_geek();
+      }
+      class Child implements Three {
+          @Override public void print_geek()
+          {
+              System.out.println("Geeks");
+          }
+      
+          public void print_for() { System.out.println("for"); }
+      }
+      public class Main {
+          public static void main(String[] args)
+          {
+              Child c = new Child();
+              c.print_geek();
+              c.print_for();
+              c.print_geek();
+          }
+      }
 
 1) interfaces cannot be used to create objects
 2) Interface methods do not have a body - the body is provided by the "implement" class
@@ -61,19 +61,19 @@ public class Main {
 5) Hybrid Inheritance :- Java doesnot support hybrid inheritance
 
 
-class Employee{               // Base or super class
-    int salary = 1000000;
-}
-class Engineer extends Employee{  // Inherited or sub class
-    int benefits = 10000;
-}
-class Details{                        // Driver Class
-    public static void main(String[] args){
-       Engineer E1 = new Engineer();
-        System.out.println("Salary : " + E1.salary
-                           + "\nBenefits : " + E1.benefits);
-    }
-}
+      class Employee{               // Base or super class
+          int salary = 1000000;
+      }
+      class Engineer extends Employee{  // Inherited or sub class
+          int benefits = 10000;
+      }
+      class Details{                        // Driver Class
+          public static void main(String[] args){
+            Engineer E1 = new Engineer();
+              System.out.println("Salary : " + E1.salary
+                                + "\nBenefits : " + E1.benefits);
+          }
+      }
 
 
 
@@ -84,49 +84,49 @@ Abstract class: is a restricted class that cannot be used to create objects (to 
 Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
 An abstract class can have both abstract and regular methods:
 
-// Abstract class
-abstract class Animal {
-  // Abstract method (does not have a body)
-  public abstract void animalSound();
-  // Regular method
-  public void sleep() {
-    System.out.println("Zzz");
-  }
-}
-// Subclass (inherit from Animal)
-class Pig extends Animal {
-  public void animalSound() {
-    // The body of animalSound() is provided here
-    System.out.println("The pig says: wee wee");
-  }
-}
-class Main {
-  public static void main(String[] args) {
-    Pig myPig = new Pig(); // Create a Pig object
-    myPig.animalSound();
-    myPig.sleep();
-  }
-}
+      // Abstract class
+      abstract class Animal {
+        // Abstract method (does not have a body)
+        public abstract void animalSound();
+        // Regular method
+        public void sleep() {
+          System.out.println("Zzz");
+        }
+      }
+      // Subclass (inherit from Animal)
+      class Pig extends Animal {
+        public void animalSound() {
+          // The body of animalSound() is provided here
+          System.out.println("The pig says: wee wee");
+        }
+      }
+      class Main {
+        public static void main(String[] args) {
+          Pig myPig = new Pig(); // Create a Pig object
+          myPig.animalSound();
+          myPig.sleep();
+        }
+      }
 
-Implementation in Java (Abstract Class):
-abstract class Shape {
-    abstract void draw();
-}
-class Circle extends Shape {
-    void draw() {
-        System.out.println("Drawing Circle");
-    }
-}
+      Implementation in Java (Abstract Class):
+      abstract class Shape {
+          abstract void draw();
+      }
+      class Circle extends Shape {
+          void draw() {
+              System.out.println("Drawing Circle");
+          }
+      }
 
-Implementation in Java (Interface):
-interface Drawable {
-    void draw();
-}
-class Circle implements Drawable {
-    public void draw() {
-        System.out.println("Drawing Circle");
-    }
-}
+      Implementation in Java (Interface):
+      interface Drawable {
+          void draw();
+      }
+      class Circle implements Drawable {
+          public void draw() {
+              System.out.println("Drawing Circle");
+          }
+      }
 
 
 
