@@ -1,7 +1,8 @@
 public class Indigo implements IAircraft{
-    ATCTower atcTower;
+    // yeh aircraft mediator s deal krega i.e ATCTower
+    ATCTower atcTower; // composition 
 
-    public Indigo(ATCTower tower) {
+    public Indigo(ATCTower tower) { //  constructor s initialise krenge
         this.atcTower = tower;
     }
 

@@ -4,7 +4,11 @@ public class Main {
         Boeing boeing1 = new Boeing(tower);
 
         boeing1.fly();
+        // Subscribed in TOWER
+        // Took-Off
         boeing1.land();
+        // Landed
+        // UnSubscribed in TOWER 
         Boeing boeing2 = new Boeing(tower);
         Boeing boeing3 = new Boeing(tower);
         Boeing boeing4 = new Boeing(tower);

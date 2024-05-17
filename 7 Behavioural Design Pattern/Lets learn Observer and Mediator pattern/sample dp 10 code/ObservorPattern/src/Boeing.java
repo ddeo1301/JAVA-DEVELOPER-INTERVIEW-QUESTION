@@ -10,7 +10,7 @@ public class Boeing implements IAircraft, IObserver{
     public void land() {
         //land krne k baad, unsubscribe the SUBJECT
         System.out.println("Landed");
-        tower.removeObserver(this);
+        tower.removeObserver(this); // remove current observor in subject interface
 
     }
 

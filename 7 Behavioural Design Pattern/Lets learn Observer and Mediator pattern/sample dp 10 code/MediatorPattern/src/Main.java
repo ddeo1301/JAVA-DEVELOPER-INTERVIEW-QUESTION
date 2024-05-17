@@ -3,6 +3,6 @@ public class Main {
         ATCTower atcTower = new ATCTower();
         Indigo indigo = new Indigo(atcTower);
 
-        indigo.requestPermForLanding();
+        indigo.requestPermForLanding(); // 
     }
 }
