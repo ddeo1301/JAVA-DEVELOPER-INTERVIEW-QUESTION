@@ -96,6 +96,10 @@ MULTI PARAMETER
 
 
 
+LAMBDA EXPRESSION
+
+
+
 
   al.forEach(x -> System.out.println(x))
   al.forEach(System.out::println)    :: method reference both static and method reference
@@ -119,7 +123,7 @@ STREAM APPLICATION
          .forEach(System.out::println);
 
 
-Begine with 'a' and ends with 'c' in lexicographical order
+ - Begine with 'a' and ends with 'c' in lexicographical order
 
             Arrays.stream(arr)
                 .filter(x -> x.startsWith("a"))
