@@ -95,12 +95,6 @@ MULTI PARAMETER
                 }
 
 
-
-LAMBDA EXPRESSION
-
-
-
-
   al.forEach(x -> System.out.println(x))
   al.forEach(System.out::println)    :: method reference both static and method reference
   al.forEach(GFG(class) :: printSquare(uska method hai))
@@ -132,3 +126,25 @@ STREAM APPLICATION
                 .forEach(System.out::println)
 
 collect method is used to collect stream data somewhere
+
+
+STREAM APPLICATION
+ - Readable, short and efficient code
+ - Works great with Lambda expression and method references
+ - can be parallelrized
+
+
+
+JAVA COLLECTIONS FRAMEWORK
+ 
+IMPLEMENTATION OF DATA STRUCTURE
+
+                List    :     ArrayList, Linkedlist, Vector, Stack
+                Set     :     HashSet, TreeSet, LinkedHashSet
+                Queue   :     LinkedList, ArrayDeque, PriorityQueue
+                Deque   :     LinkedList, ArrayDeque
+                Map     :     HashMap, TreeMap, LinkedHashMap
+
+Collections Class(Implementation of Basic Algorithm)
+
+                binarySearch(), sort(), max(), min(), reverse(), fill()
