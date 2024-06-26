@@ -108,3 +108,17 @@
                                 .getAsDouble()
 
 
+ 10) BIG INTEGER
+
+        BigInteger A = new BigInteger("54");
+        BigInteger B = new BigInteger(b);
+        BigInteger C = BigInteger.valueOf(c);
+
+        A.substract(B);
+        A.add(B);
+        A.divide(B);
+        A.multiply(B);
+        A.remainder(B);
+        A.compareTo(B)     A > B ( > 0)
+
+        int a = A.intValue();  A.longValue()  A.toString()   A.isProbablePrime(34)  A.nextProbablePrime()

@@ -96,3 +96,22 @@ Explanation:
 1) When you create an instance of Vehicle, only the Vehicle constructor is called because it's the only class in its hierarchy.
 2) When you create an instance of Car, first the Vehicle constructor is called (since Car extends Vehicle), then the Car constructor is called.
 3) Similarly, when you create an instance of Maruti, the constructor chain starts from Vehicle, then Car, and finally Maruti. So, the constructors of all three classes are called in sequence.
+
+Animal an = new Cat();
+ - object is cat but reference is animal and whatever cat class inherited from animal that only we can access and 
+ animal class wla fn will be only called
+
+Cat c3 = (Cat) animal;
+ - again converting it in reference variable of cat so cat wla reference hga
+
+- variable hiding :- child clas variables hides the parent class variable
+
+- By default all the class  extends object class    Car1.equals(Car2);
+- @Override is allowed only in overridden but it is nt compulsary
+
+- Ref Variable :- Parent          Object :- Child
+   - for instance member(for fields/variables) --- Reference variable
+   - function overriding  ---- Child Object
+
+
+ASSOCIATION(gfg notes)

@@ -38,3 +38,14 @@ ADVANTAGES OF ABSTRACTION
 
 In abstraction we seperate interface from implementation so that if we want to add new implementation
 we can use interface
+
+
+
+DIFFERENCE BETWEEN INTERFACE AND ABSTRACTION(gfg notes)
+
+ENUMS(gfg notes)
+ - classes to store predefined values
+ - we can group together multiple constant which we know that we will use frequently in ENUM class
+ - There is a abstract class ENUM provided by java, whenever you are declaring the enum that enum class will always 
+ extends the predefined abstract class ENUM . So we are not allowed to extend
+ - ordinal :- rank java has given

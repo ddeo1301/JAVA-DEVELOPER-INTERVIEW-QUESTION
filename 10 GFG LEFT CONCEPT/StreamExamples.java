@@ -111,6 +111,27 @@ public class JavaStreamExample {
         Stream.iterate(1, element->element+1)  
         .filter(element->element%5==0)  
         .limit(5)  
-        .forEach(System.out::println);  
+        .forEach(System.out::println);   
     }  
 }  
+
+
+// leetcode 3194 minimum average to largest and smallest
+List<Double> averages = IntStream.range(0, nums.length / 2)  // creates a stream of integers from 0 to n/2 - 1.
+            .mapToDouble(i -> (nums[i] + nums[nums.length - 1 - i]) / 2.0)  // maps each index i to the average of
+            // the i-th smallest and i-th largest elements.
+            .boxed() // converts the DoubleStream to a Stream<Double>
+            .collect(Collectors.toList()); // collects the averages into a List<Double>
+
+            // boxed() method in Java Streams is used to convert a primitive stream (e.g., IntStream, DoubleStream,
+            // LongStream) to a stream of their corresponding wrapper types (e.g., Stream<Integer>, Stream<Double>,
+            //  Stream<Long>).
+        
+        // finds the minimum value in the list of averages using a comparator for Double.
+        return averages.stream().min(Double::compare).orElse(Double.NaN....or -1.0);
+
+        double minAverage = IntStream.concat(
+            IntStream.concat(calculateAverages(nums1), calculateAverages(nums2)),
+            calculateAverages(nums3))
+            .min()
+            .orElse(-1.0);.

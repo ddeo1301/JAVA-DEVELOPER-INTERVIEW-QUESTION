@@ -1,8 +1,8 @@
-al.stream()
+ - al.stream()
   .filter(...)
   .forEach(System.out::println)
 
-List<Integer> al = new ArrayList<>(Arrays.asList(5, 10, 15, 20));
+ - List<Integer> al = new ArrayList<>(Arrays.asList(5, 10, 15, 20));
 
 Advantage of stream()
   - No storage
@@ -15,6 +15,7 @@ Advantage of stream()
 
 LAMBDA  FUNCTION
   - Function Iterface :- which has only 1 abstract class
+
   - interface Test{
          void print();
      }
@@ -95,9 +96,9 @@ MULTI PARAMETER
                 }
 
 
-  al.forEach(x -> System.out.println(x))
-  al.forEach(System.out::println)    :: method reference both static and method reference
-  al.forEach(GFG(class) :: printSquare(uska method hai))
+  - al.forEach(x -> System.out.println(x))
+  - al.forEach(System.out::println)    :: method reference both static and method reference
+  - al.forEach(GFG(class) :: printSquare(uska method hai))
 
 
 
