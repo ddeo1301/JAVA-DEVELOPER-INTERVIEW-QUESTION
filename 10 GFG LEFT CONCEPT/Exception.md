@@ -61,7 +61,7 @@ NESTED TRY
 
 
 - THROW
-    - used to throw an exception exolicitly
+    - used to throw an exception explicitly
     - can throw both checked and unchecked exception
     - throw new exeption_class("error message").......where instance must be type throwable or subclass of throwable
     - If we throw an unchecked exception from a method, it is must to handle the exception or declare in throw clause
@@ -100,6 +100,17 @@ NESTED TRY
      - By default, Checked Exceptions are not forwarded in calling chain (propagated).
 
 
+ - EXCEPTION HANDLING WITH METHOD OVERRIDING IN JAVA
+     - If the superclass method does not declare an exception, subclass overridden method cannot declare the checked exception but can declare unchecked exception.
+     - If the superclass method declares an exception, subclass overridden method can declare the same subclass 
+     exception or no exception but cannot declare parent exception.
+
+
+ - JAVA CUSTOM EXCEPTION / USER DEFINED EXCEPTION
+     - In Java, we can create our own exceptions that are derived classes of the Exception class.
+     - Using the custom exception, we can have your own exception and message.
+
+
 - EQUALS AND HASHCODE
     - a == b always compare memory location
 
@@ -111,3 +122,10 @@ SINGLETON
   - Logging        Database Connections     Kafka/Redis Connections
   - Early Initialization
   - Lazy Initialization 
+
+
+FINALIZE
+ - used to perform cleanup processing just before object is garbage collected
+ - finalize() method is used with the objects
+ - finalize method performs the cleaning activities with respect to the object before its destruction
+ - finally method is executed just before the object is destroyed
