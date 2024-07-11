@@ -74,13 +74,29 @@ HASHMAP
      element in the node if it exists or nt
 
  
- - Comparable Interface
+ - COMPARABLE INTERFACE
      - It provides a single sorting sequence i.e we can sort the elements on the basis of single data member only.
+     - objects of these class are comparable i.e have natural ordering
+     - sort(arr)        sort(arr, collections.reverseOrder()) 
+     - Library class that implement this interface are 
+          - Wrapper Class (Integer, Boolean, Character, Double, Float, Long, BigInteger)
+          - String, Date, Time
      - eg:- rollNo, Name
 
- - Comparator Interface
+                        public interface Comparable<T>{
+                            public int compareTo(T o)
+                        }
+
+
+ - COMPARATOR INTERFACE
      - contains 2 methods compare(Object obj1, Object obj2) and equals(Object element)
-     - It provides multiple sorting sequence i.e we can sort the element on the basis of any data member
+     - It provides multiple sorting sequence i.e we can sort the element on the basis of any data member i.e no natural ordering
+     - paramter in standared libraries like :- sort(), binarySearch(), min(), max(), TreeSet(), TreeMap(), PriorityQueue()
+
+                        public interface Comparator<T>{
+                            public int compare(T t1, T t2)
+                        }
+
 
 
  - INITIALIZATION

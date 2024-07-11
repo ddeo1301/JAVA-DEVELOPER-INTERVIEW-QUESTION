@@ -51,7 +51,16 @@ public int compare(Object o1, Object o2){
 
 Comparator<Student> s1 = Comparator.comparing(Student::getName);
 Comparator<Student> s1 = Comparator.comparing(Student::getName, Comparator.nullsFirst(String::compareTo)); // nullsLast
+// comparing(keyExtraction),  thenComparing(keyExtraction),  naturalOrder(),  reversed(),  reverseOrder()
+// nullFirst(comparator),   nullLast(comparator)
 Collections.sort(al, s1);
+
+Arrays.sort(arr, (p1, p2) -> p1.x - p2.x);
+Arrays.sort(arr, String :: compareToIgnoreCase);
+Arrays.sort(arr, Comparator.nullFirst(Comparator.naturalOrder()))
+
+// Sort first by name and then by roll number
+Arrays.sort(arr, Comparator.comparing(Student :: getName).thenComparing(Student::getRoll))
 
 Collections.sort(al);
 Collections.sort(al, Collections.reverseOrder());

@@ -138,3 +138,19 @@ DESERIALIZATION (REVERSE OF SERIALISATION)
 
 - serialization and deserialization process is platform-independent, it means you can serialize an object on one platform and deserialize it on a different platform.
 - We must have to implement the Serializable interface for serializing the object.
+
+
+TRANSIENT KEYWORD
+ - During the serialization, when we do not want an object to be serialized we can use a transient keyword.
+ - The transient keyword can be used with the data members of a class in order to avoid their serialization. 
+ - For example, if a program accepts a user's login details and password. But we don't want to store the original
+  password in the file. Here, we can use transient keyword and when JVM reads the transient keyword it ignores the
+   original value of the object and instead stores the default value of the object.
+ - private transient <member variable>;  
+ - transient private <member variable>;  
+
+
+ Native
+ - In Java, the native keyword is used to indicate that a method is implemented in native code, typically using the Java Native Interface (JNI). 
+ - This allows Java code to interact with native libraries written in languages like C, C++, or assembly.
+ - native keyword can only be applied to methods, not fields or classes

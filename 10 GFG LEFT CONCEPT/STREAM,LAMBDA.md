@@ -129,6 +129,17 @@ STREAM APPLICATION
 collect method is used to collect stream data somewhere
 
 
+REDUCE 
+   - allows you to transform a stream of elements into a single result.
+   - int sum = numbers.stream()
+                         .reduce(0, (a, b) -> a + b);  // STARTING INITIAL VALUE IS 0
+   - String concatenated = words.stream()
+                                   .reduce("", (a, b) -> a + " " + b);
+   -  Optional<Integer> max = numbers.stream()
+                                       .reduce((a, b) -> a > b ? a : b);  
+    // no initial value provided, the result is wrapped in an Optional.
+
+
 STREAM APPLICATION
  - Readable, short and efficient code
  - Works great with Lambda expression and method references
@@ -149,3 +160,26 @@ IMPLEMENTATION OF DATA STRUCTURE
 Collections Class(Implementation of Basic Algorithm)
 
                 binarySearch(), sort(), max(), min(), reverse(), fill()
+
+
+
+SINGLE STREAM
+ - Serial streams use a single thread to process the pipeline of operations.
+ - They execute operations one after the other in a sequential manner.
+ - serial streams are suitable for small datasets or when the order of execution is important
+
+            List<String> words = Arrays.asList("apple", "banana", "cherry");
+            words.stream()
+                .filter(word -> word.length() > 5)
+                .forEach(System.out::println);
+
+
+PARALLEL STREAM
+ - Parallel streams leverage multiple threads to process the pipeline of operations concurrently.
+ - They divide the stream into multiple substreams, process them in parallel, and combine the results.
+ - parallel streams can provide performance benefits for large datasets with computationally intensive 
+ operations on multi-core systems
+
+            words.parallelStream()
+                .filter(word -> word.length() > 5)
+                .forEach(System.out::println);
