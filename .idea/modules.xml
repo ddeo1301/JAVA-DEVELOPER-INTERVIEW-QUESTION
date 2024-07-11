@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2 OOPS/2 OOPS.iml" filepath="$PROJECT_DIR$/2 OOPS/2 OOPS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 creational design principle/3. Lets learn prototype Design Pattern/3. Lets learn prototype Design Pattern.iml" filepath="$PROJECT_DIR$/5 creational design principle/3. Lets learn prototype Design Pattern/3. Lets learn prototype Design Pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 creational design principle/2. Lets learn SIngleton and Builder Design Pattern/DP1 Codes/BuilderPattern/BuilderPattern.iml" filepath="$PROJECT_DIR$/5 creational design principle/2. Lets learn SIngleton and Builder Design Pattern/DP1 Codes/BuilderPattern/BuilderPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7 Behavioural Design Pattern/COR and Command Pattern/COR and Command Pattern.iml" filepath="$PROJECT_DIR$/7 Behavioural Design Pattern/COR and Command Pattern/COR and Command Pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA DEVELOPER INTERVIEW QUESTION.iml" filepath="$PROJECT_DIR$/JAVA DEVELOPER INTERVIEW QUESTION.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7 Behavioural Design Pattern/Lets learn Observer and Mediator pattern/sample dp 10 code/MediatorPattern/MediatorPattern.iml" filepath="$PROJECT_DIR$/7 Behavioural Design Pattern/Lets learn Observer and Mediator pattern/sample dp 10 code/MediatorPattern/MediatorPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7 Behavioural Design Pattern/Lets learn Observer and Mediator pattern/sample dp 10 code/ObservorPattern/ObservorPattern.iml" filepath="$PROJECT_DIR$/7 Behavioural Design Pattern/Lets learn Observer and Mediator pattern/sample dp 10 code/ObservorPattern/ObservorPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 creational design principle/1. Introduction TO Design Pattern Factory and Abstract Factory/DP1 Codes (1)/DP1 Codes/SampleDP/SampleDP.iml" filepath="$PROJECT_DIR$/5 creational design principle/1. Introduction TO Design Pattern Factory and Abstract Factory/DP1 Codes (1)/DP1 Codes/SampleDP/SampleDP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 creational design principle/2. Lets learn SIngleton and Builder Design Pattern/DP1 Codes/SingletonPattern/SingletonPattern.iml" filepath="$PROJECT_DIR$/5 creational design principle/2. Lets learn SIngleton and Builder Design Pattern/DP1 Codes/SingletonPattern/SingletonPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 creational design principle/1. Introduction TO Design Pattern Factory and Abstract Factory/DP1 Codes (1)/DP1 Codes/sampleDP2/sampleDP2.iml" filepath="$PROJECT_DIR$/5 creational design principle/1. Introduction TO Design Pattern Factory and Abstract Factory/DP1 Codes (1)/DP1 Codes/sampleDP2/sampleDP2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6 structure design principle/Introduction to structural design pattern,decorarator,adaptor/sampleDP4/sampleDP4.iml" filepath="$PROJECT_DIR$/6 structure design principle/Introduction to structural design pattern,decorarator,adaptor/sampleDP4/sampleDP4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6 structure design principle/Introduction to structural design pattern,decorarator,adaptor/sampleDP5/sampleDP5.iml" filepath="$PROJECT_DIR$/6 structure design principle/Introduction to structural design pattern,decorarator,adaptor/sampleDP5/sampleDP5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6 structure design principle/bridge, composite and flyweight pattern/sampleDP8Codes/sampleDP7/sampleDP7.iml" filepath="$PROJECT_DIR$/6 structure design principle/bridge, composite and flyweight pattern/sampleDP8Codes/sampleDP7/sampleDP7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6 structure design principle/bridge, composite and flyweight pattern/sampleDP8Codes/sampleDP7_2/sampleDP7_2.iml" filepath="$PROJECT_DIR$/6 structure design principle/bridge, composite and flyweight pattern/sampleDP8Codes/sampleDP7_2/sampleDP7_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6 structure design principle/bridge, composite and flyweight pattern/sampleDP8Codes/sampleDp7_3/sampleDp7_3.iml" filepath="$PROJECT_DIR$/6 structure design principle/bridge, composite and flyweight pattern/sampleDP8Codes/sampleDp7_3/sampleDp7_3.iml" />
+    </modules>
+  </component>
+</project>

@@ -226,3 +226,48 @@ for(Map.Entry m:map.entrySet()){
 }
 
 
+// lazy and early(eager) initialization
+// 1) Early (Eager) Initialization
+public class EagerSingleton {
+    private static final EagerSingleton INSTANCE = new EagerSingleton();
+
+    private EagerSingleton() {}
+
+    public static EagerSingleton getInstance() {
+        return INSTANCE;
+    }
+}
+
+// 2) Lazy Initialization
+public class LazySingleton {
+    private static LazySingleton instance;
+
+    private LazySingleton() {}
+
+    public static LazySingleton getInstance() {
+        if (instance == null) {
+            instance = new LazySingleton();
+        }
+        return instance;
+    }
+}
+
+// 3) Thread-Safe Lazy Initialization with Double-Checked Locking :- to ensure that the singleton instance is
+// created only once, even in a multi-threaded environment.
+public class ThreadSafeLazySingleton {
+    private static volatile ThreadSafeLazySingleton instance;
+
+    private ThreadSafeLazySingleton() {}
+
+    public static ThreadSafeLazySingleton getInstance() {
+        if (instance == null) {
+            synchronized (ThreadSafeLazySingleton.class) {
+                if (instance == null) {
+                    instance = new ThreadSafeLazySingleton();
+                }
+            }
+        }
+        return instance;
+    }
+}
+

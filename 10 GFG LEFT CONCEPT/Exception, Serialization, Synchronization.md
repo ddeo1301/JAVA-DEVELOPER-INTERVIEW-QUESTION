@@ -118,14 +118,23 @@ NESTED TRY
 - hashcode is returning true, then your equals may or maynot return true(collisons)
 
 
-SINGLETON 
-  - Logging        Database Connections     Kafka/Redis Connections
-  - Early Initialization
-  - Lazy Initialization 
-
-
 FINALIZE
  - used to perform cleanup processing just before object is garbage collected
  - finalize() method is used with the objects
  - finalize method performs the cleaning activities with respect to the object before its destruction
  - finally method is executed just before the object is destroyed
+
+
+SERIALIZATION
+ - Serialization is a mechanism of converting the state of an object into a byte stream. 
+ - It is mainly used in Hibernate, RMI, JPA, EJB and JMS technologies.
+ - For serializing the object, we call the writeObject() method of ObjectOutputStream class
+
+
+DESERIALIZATION (REVERSE OF SERIALISATION)
+ - Deserialization is the process where the byte stream is used to recreate the actual Java object in memory.
+ - For deserialization we call the readObject() method of ObjectInputStream class.
+
+
+- serialization and deserialization process is platform-independent, it means you can serialize an object on one platform and deserialize it on a different platform.
+- We must have to implement the Serializable interface for serializing the object.
