@@ -1,6 +1,7 @@
 JAR(Java ARchive)
    - Whenever we want to bundle up our classes so that it can be used somewhere.
    - It is the compressed version of all the sourcecode  that we have in our project
+   - doesnot include external libraries only contain POM xml but FAT jAR include external libraries
    - ADVANTAGE
        - whenever we want to use 1 class from one project in another project
        
@@ -92,32 +93,3 @@ WHEN API SHOULD BE USED
 
 
 
-WEB SERVICES
- - Through standared protocol they r going to interact b/w server and client
-    1) HOSTIP :- where exactly our service is runnning
-    2) PORT   :- Every server can run various task or application on it . For every application there are 
-                 dedicated port on it. eg:- we have reached the host 10.20.30.12, Now exactly where we need 
-                 to go , there we require the PORT
-    3) METHOD :- For example now we reached the vistara backend, Nowexactly which method is required like 
-                 booking flight etc so here we need to specify which method we need to go
-    4) PARAMETER
-
-  - As we have centralized standared protocols, so it doesnot matter that our client and server are written in same language or different language
-
- - A web service is a set of open protocols and standards that allow data to be exchanged between different
-    applications or systems.
- - A standardized way of propagating messages between server and client applications.
- - The web service would be able to deliver functionality to the client that invoked the web service.
- - Location approach with independence of Programming language.
-
-
-TYPES OF WEB SERVICES
-   1) SOAP (Simple Object Access Protocol):
-      - XML based protocol for accessing web services.
-      - Has its own security called WS security.
-      - Uses WSDL file (Web Services Description Language) which is an xml document which contains 
-         information about path and end point and how to use that method.
-
-   2) RESTful (Representational State Transfer) Web Services:
-       - Permits different data types such as plain text, HTML, XML and JSON.
-       - Can use soap as implementation.
