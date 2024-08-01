@@ -140,10 +140,12 @@ SPRING CONFIGURATION :
       - @Configuration indicates that the class is a source of bean definitions.
       - @ComponentScan tells Spring to scan the specified package for components (beans).
       - @Component is used to define beans.
-      - @Autowired is used to indicate the points of injection.
+      - @Autowired is used to indicate the points of injection. For eg: Notification Service Class requires
+            SMSGateway. we have to specify it somewhere thats why we r using @Autowired. It is dependency on
+            SMSGateway. If we dont use @Autowired we will get NULLPOINTEXCEPTION bcoz our SMSGateway is NULL 
 
      - Spring's IoC container manages the lifecycle of beans and injects dependencies where needed, providing 
-     a clean separation of concerns and promoting loose coupling between components. 
+        a clean separation of concerns and promoting loose coupling between components. 
      - This makes the application more modular, easier to maintain, and testable.
 
 BENEFITS OF IOC AND DI IN SPRING BEAN : 
@@ -159,23 +161,50 @@ SPRING BEAN
 
 
 BEAN FACTORY :-
- - BeanFactory is the simplest container in the Spring Framework, providing the core features necessary for dependency injection. 
- - It is primarily used for lightweight applications where memory consumption is critical. Key characteristics include:
-Lazy Initialization: Beans are instantiated only when requested, which can save memory in applications where not all beans are needed immediately.
-Basic Dependency Injection: Supports basic features of dependency injection but lacks advanced functionalities.
-Limited Features: Does not support annotation-based configuration, internationalization (I18N), or event propagation.
-Example usage:
-java
-BeanFactory factory = new XmlBeanFactory(new Resource("applicationContext.xml"));
+ - BeanFactory is the simplest container in the Spring Framework, providing the core features necessary for 
+ dependency injection. 
+ - It is primarily used for lightweight applications where memory consumption is critical.
 
-ApplicationContext
-ApplicationContext is a more advanced and feature-rich container that extends BeanFactory. It is recommended for most enterprise applications due to its additional capabilities:
-Eager Initialization: By default, it pre-instantiates all singleton beans at startup, reducing response time for user requests.
-Support for Annotations: Allows for annotation-based configuration (e.g., @Autowired, @PreDestroy), making it easier to manage dependencies.
-Internationalization: Can resolve messages from property files, facilitating the development of applications that support multiple languages.
-Event Handling: Supports event propagation, allowing beans to publish and listen to application events.
-Parent-Child Contexts: Supports hierarchical contexts, where a parent context can be shared across multiple child contexts.
-Common implementations of ApplicationContext include:
-ClassPathXmlApplicationContext: Loads bean definitions from an XML file located in the classpath.
-FileSystemXmlApplicationContext: Loads bean definitions from an XML file in the filesystem.
-AnnotationConfigApplicationContext: Used for Java-based configuration.
+       - Key characteristics include:
+           1) Lazy Initialization: Beans are instantiated only when requested, which can save memory in 
+                    applications where not all beans are needed immediately.
+           2) Basic Dependency Injection: Supports basic features of dependency injection but lacks advanced 
+                    functionalities.
+           3) Limited Features: Does not support annotation-based configuration, internationalization (I18N),
+                     or event propagation.
+
+                BeanFactory factory = new XmlBeanFactory(new Resource("applicationContext.xml"));
+
+APPLICATION CONTEXT 
+ - ApplicationContext is a more advanced and feature-rich container that extends BeanFactory. 
+ - Used for creating all the beans that has been created
+
+     - Eager Initialization: By default, it pre-instantiates all singleton beans at startup, reducing 
+                response time for user requests.
+     - Support for Annotations: Allows for annotation-based configuration (e.g., @Autowired, @PreDestroy),
+                 making it easier to manage dependencies.
+     - Internationalization: Can resolve messages from property files, facilitating the development of 
+                applications that support multiple languages.
+     - Event Handling: Supports event propagation, allowing beans to publish and listen to application events.
+     - Parent-Child Contexts: Supports hierarchical contexts, where a parent context can be shared across 
+                multiple child contexts.
+
+COMMON IMPLEMENTATION OF APPLICATION CONTEXT INCLUDE:
+   - ClassPathXmlApplicationContext: Loads bean definitions from an XML file located in the classpath.
+   - FileSystemXmlApplicationContext: Loads bean definitions from an XML file in the filesystem.
+   - AnnotationConfigApplicationContext: Used for Java-based configuration.
+
+
+    <bean id="engine" class="com.example.Engine">
+            <property name="type" value="V8" ref="address" />
+    </bean>
+    
+     - bean tags defines bean
+     - id attribute provide unique identifier for the bean
+     - class is the path/package where our class is present
+     - property tag configure property of the bean
+     - name attribute specifies the property name
+     - value attribute sets a literal value
+     - ref attribute refers to another bean by id
+
+     - If we are not specyfing anything in scope then it is SINGLETON else whatever we r specyfying it is that
