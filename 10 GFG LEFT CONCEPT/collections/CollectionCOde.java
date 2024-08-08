@@ -1,3 +1,10 @@
+// ARRAY AND STRING
+sb.append("a").append("b");
+sb.append("a" + "b");
+sb.insert(0, "c");
+
+
+
 // ArrayList
 List<Integer> al = new ArrayList<Integer>();
 List<Integer> al = Arrays.asList(str);
@@ -64,6 +71,8 @@ Arrays.sort(arr, Comparator.comparing(Student :: getName).thenComparing(Student:
 
 Collections.sort(al);
 Collections.sort(al, Collections.reverseOrder());
+Collections.sort(str, (a,b) -> Integer.compare(a.length(), b.length()));
+Collections.sort(str, (a,b) -> a.length() - b.length());
 
 Collections.addAll(al,"Mango","Lichi","Dates");
 Collections.addAll(al, strArr);
@@ -100,6 +109,7 @@ ll.clear()
 HashSet<String> hs = new HashSet<>();
 LinkedHashSet<String> lhs = new LinkedHashSet<>();
 TreeSet<String> ts = new TreeSet<>();
+TreeSet<String> ts = new TreeSet<>(Comparator.reverseOrder());
 
 hs.add("one")
 hs.addAll(hs2)
@@ -123,6 +133,11 @@ HashTable<Integer, String> hm = new HashTable<Integer, String>();
 hm.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
 hm.putIfAbsent(arr[0], new ArrayList<>()); // (103,"Divyashu")
 hm.putAll(hm2)
+
+hm.containsKey("Apple");
+hm.containsValues(3);
+Integer[] valueArray = new Integer[hm.size()];
+hm.values.toArray(valueArray)
 
 hm.remove(100) // key
 hm.remove("Divya") // value
@@ -149,6 +164,11 @@ hm.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::pr
 hm.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).forEach(System.out::println)
 
 NavigableMap<Integer, String> tm = new TreeMap<Integer, String>();
+TreeMap<Integer, String> tm = new TreeMap<>(Comparator.reverseOrder());
+tm.firstKey();
+tm.lastKey();
+tm.descendingKeySet();
+tm.remove("one");
 tm.descendingMap(); // according to keys
 tm.headMap(102, true); // whose keys are <= specified key 
 tm.headMap(102); // whose keys are < specified key 
@@ -176,6 +196,9 @@ PriorityQueue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>(
 PriorityQueue<int[]> pq = new PriorityQueue<>(
     (a,b) -> a[1] - b[1]
 );
+
+PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+pq.addAll(hm.values());
 
 Deque<String> dq = new ArrayDeque<String>();
 dq.offerFirst("Jai"); offerLast("vijay")

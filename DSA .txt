@@ -2,3 +2,5 @@ DSA
 ------
 
 SUBMATRIX :- add 1st row subarray and then column subarray
+
+CIRCULAR ARRAY(LEETCODE 2134) :- sliding window lgao. No of 1 window bnao ek ek krke increase karo

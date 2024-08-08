@@ -132,3 +132,122 @@ SPRING BEAN SCOPE
     XmlWebApplicationContext)
  
 
+TOMCAT
+   - Tomcat serves as a servlet container, enabling the execution of Java Servlets and JavaServer Pages (JSP).
+   - used for Hosting and serving Java-based web applications.
+   - Provides a local server environment for developers to test applications before deploying them to a 
+     production server.
+   
+   - Java code is running on server, whenever we get any request, it is route to server and server sees that
+      which code needs to be executed.
+   - TOMCAT is nothing but **SERVELET CONTAINER** i.e there r multiple servelet which r hoisted inside it so 
+      that it can route the request to those servelet.
+
+   - Tomcat is a Servlet and JSP Container.
+   - A java servlet encapsulates code and business logic and defines how requests and responses should be
+      handled in JAVA Server.
+   - JSP is a server side view Rendering
+   - As a Developer, you write the servlet or JSP, rest is handled by Tomcat.
+
+    COMPONENTS:
+     - Catalina: The core servlet container responsible for managing servlets and JSPs.
+     - Coyote: Acts as an HTTP connector, allowing Tomcat to handle HTTP requests and serve static content.
+     - Jasper: The JSP engine that compiles JSP files into servlets for execution.
+
+HOW DOES TOMCAT WORK? 
+  1) A client inputs an HTTP request
+  2) This request goes to a web server
+  3) The server forwards this request to the Apache Tomcat container
+  4) The container and relevant connectors decide how to process the request 
+  4) The container generates an appropriate response
+  5) The response goes back to the client via the web server
+
+DISADVANTAGES
+  - Tomcat is not full-featured web server or application server, although it can fulfill many of the same tasks. 
+  - It doesn’t support some enterprise-level features, such as EJBs (Jakarta Enterprise Beans, formerly 
+  Enterprise Java Beans) or some Java APIs. 
+  - For this level of functionality, developers require a full application server such as RedHat JBoss or Oracle WebLogic.
+
+                //  Sample servlet code -> HTML inside JAVA
+
+                public class HelloWorld extends HttpServlet {
+                    // whenever our class extends HTTPServlet, then our servelet container can determine that
+                    // this is the one of the candidate where code is routed to
+                
+                    private String message;
+
+                    public void init() throws ServletException {
+                        // Do required initialization
+                        message = "Hello World";
+                    }
+
+                    public void doGet(HttpServletRequest request, HttpServletResponse response)
+                        throws ServletException, IOException {
+                        
+                        // Set response content type
+                        response.setContentType("text/html");
+
+                        // Actual logic goes here.
+                        PrintWriter out = response.getWriter();
+                        out.println("<h1>" + message + "</h1>");
+                    }
+
+                    public void destroy() {
+                        // do nothing.
+                    }
+                }
+
+
+                // Sample JSP code -> JAVA inside HTML
+
+                <html> 
+                <head><title>A Comment Test</title></head> 
+                
+                <body>
+                    <p>Today's date: <%= (new java.util.Date()).toLocaleString()%></p>
+                </body> 
+                </html>
+
+    - web.xml -> /path -> servelet(java code)   
+          - In earlier time when using spring we use to specify that this is web.xml file and this is the
+            path which will get executed
+    
+    - TOMCAT comes into picture whenever we want some dynamic content
+    - TOMCAT is still required in Java Application even if we dont need HTML inside it bcoz main work of 
+    TOMCAT is to post ur servelet
+
+
+WAYS OF CREATING BEANS
+  - @Component ->  1) @Service  2) @Repository  3) @Controller
+
+
+LOMBOK
+ - Lombok is a popular Java library that helps reduce boilerplate code by automatically generating commonly 
+   used methods and constructors. 
+ - Add in dependency in pom.xml
+ - Reduced Boilerplate: Significantly decreases the amount of repetitive code, making the codebase cleaner 
+          and more maintainable.
+
+    Annotations for Boilerplate Code Reduction:
+      1) @Getter and @Setter: Automatically generate getter and setter methods for fields.
+      2) @ToString: Generates a toString method.
+      3) @EqualsAndHashCode: Generates equals and hashCode methods.
+      4) @NoArgsConstructor, @AllArgsConstructor, and @RequiredArgsConstructor: Generate constructors.
+      5) @Data: A shortcut for @Getter, @Setter, @ToString, @EqualsAndHashCode, and @RequiredArgsConstructor.
+      6) @Builder: Implements the Builder pattern for object creation.
+      7) @Log: Provides logging support by generating a logger.
+
+    Utility Annotations:
+      1) @SneakyThrows: Allows checked exceptions to be thrown without declaring them in the method signature.
+      2) @Synchronized: An alternative to Java's synchronized keyword.
+      3) @Cleanup: Ensures a resource is automatically cleaned up.
+      4) @Val and @Var: Automatically infer types for local variables (similar to Java 10's var).
+
+
+    Dependency for lombok:
+    
+        <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <optional>true</optional>
+        </dependency>
