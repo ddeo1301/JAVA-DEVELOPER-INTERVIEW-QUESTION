@@ -217,9 +217,6 @@ DISADVANTAGES
     TOMCAT is to post ur servelet
 
 
-WAYS OF CREATING BEANS
-  - @Component ->  1) @Service  2) @Repository  3) @Controller
-
 
 LOMBOK
  - Lombok is a popular Java library that helps reduce boilerplate code by automatically generating commonly 
