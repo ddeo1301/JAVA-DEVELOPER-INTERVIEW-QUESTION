@@ -9,13 +9,45 @@ TYPES OF INHERITANCE:
   2) Multilevel Inheritance
   3) Hierarical Inheritance
   4) Hybrid Inheritance
-  5) Multiple Inheritance
+  5) Multiple Inheritance:- Java dont support inorder to prevent DIAMOND PROBLEM as to avoid complexity and ambiguity arise
+     from it ....which method should D inherit
+
+                        interface One {
+                            public void print_geek();
+                        }
+                        
+                        interface Two {
+                            public void print_for();
+                        }
+                        
+                        interface Three extends One, Two {
+                            public void print_geek();
+                        }
+                        class Child implements Three {
+                            @Override public void print_geek()
+                            {
+                                System.out.println("Geeks");
+                            }
+                        
+                            public void print_for() { System.out.println("for"); }
+                        }
+                        
+                        // Drived class
+                        public class Main {
+                            public static void main(String[] args)
+                            {
+                                Child c = new Child();
+                                c.print_geek();
+                                c.print_for();
+                                c.print_geek();
+                            }
+                        }
+
 
 
 IMPLEMENTING INHERITANCE IN JAVA
   - Unlike C++, Java doesnot provide an inheritance specifier like public, protected or private i.e we cannot specify mode of inheritance
-  - Java doesnot support multiple inheritance
-
+    
     class SuperClass{
        // SuperClass fields and methods
     }
@@ -112,6 +144,8 @@ Cat c3 = (Cat) animal;
 - Ref Variable :- Parent          Object :- Child
    - for instance member(for fields/variables) --- Reference variable
    - function overriding  ---- Child Object
+ 
+- 
 
 
 ASSOCIATION(gfg notes)
