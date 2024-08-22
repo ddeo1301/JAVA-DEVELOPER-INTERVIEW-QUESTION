@@ -1,13 +1,18 @@
 STATIC KEYWORD
 
     - used for m/m management. 
-    - m/m space are allocated only once during execution of the program in static variable and methods and m/m space is shared among all instances of class....eg :- declare static block and it will be executed only once
+    - m/m space are allocated only once during execution of the program in static variable and methods and m/m space is 
+       shared among all instances of class....eg :- declare static block and it will be executed only once
     - static members can be accessed without creating instance of the class(i.e new keyword)....
-    - static members are associated with the class not with individual object i.e change in static members will be reflected in all instances of the class and we can access static members using the class name rather then object reference.
-    - static methods and variables cannot access non static members of the class, as they are not associated with any particular instance of the class
-    - static methods can be overloaded i.e we can define multiple methods with same name but diff parameters but cannot override as they are associated with the class rather than with particular instance of the class
+    - static members are associated with the class not with individual object i.e change in static members will be reflected
+       in all instances of the class and we can access static members using the class name rather then object reference.
+    - static methods and variables cannot access non static members of the class, as they are not associated with any 
+        particular instance of the class
+    - static methods can be overloaded i.e we can define multiple methods with same name but diff parameters but cannot
+       override as they are associated with the class rather than with particular instance of the class
 
-- STATIC LOCAL VARIABLES ARE NOT ALLOWED bcoz when a variable is declared static , then a single copy of variable is created and shared among all objects at the class level
+- STATIC LOCAL VARIABLES ARE NOT ALLOWED bcoz when a variable is declared static , then a single copy of variable is created
+    and shared among all objects at the class level
 - static block and variable are executed in the order they are present in a program
 
 STATIC METHODS RESTRICTION :-
