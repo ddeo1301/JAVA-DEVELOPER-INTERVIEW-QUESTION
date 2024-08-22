@@ -144,8 +144,61 @@ Cat c3 = (Cat) animal;
 - Ref Variable :- Parent          Object :- Child
    - for instance member(for fields/variables) --- Reference variable
    - function overriding  ---- Child Object
- 
-- 
+
+                    class Animal {
+                        public void makeSound() {
+                            System.out.println("The animal makes a sound");
+                        }
+                    }
+                    
+                    class Cat extends Animal {
+                        @Override
+                        public void makeSound() {
+                            System.out.println("The cat meows");
+                        }
+                    
+                        public void scratch() {
+                            System.out.println("The cat scratches");
+                        }
+                    }
+                    
+                    class Dog extends Animal {
+                        @Override
+                        public void makeSound() {
+                            System.out.println("The dog barks");
+                        }
+                    }
+                    
+                    public class Main {
+                        public static void main(String[] args) {
+                            // This is legal: Upcasting
+                            Animal animal = new Cat(); // Cat is an Animal
+                            animal.makeSound(); // Output: The cat meows
+                    
+                            // This is illegal and will not compile
+                            // Cat an = new Animal(); // Uncommenting this line will cause a compile-time error
+                    
+                            // Correct way to downcast
+                            if (animal instanceof Cat) {
+                                Cat cat = (Cat) animal; // Safe downcast
+                                cat.scratch(); // Output: The cat scratches
+                            } else {
+                                System.out.println("The animal is not a Cat.");
+                            }
+                    
+                            // Example of unsafe downcasting
+                            Animal anotherAnimal = new Dog();
+                            // Cat anotherCat = (Cat) anotherAnimal; // This would throw a ClassCastException at runtime
+                    
+                            // Checking the type before downcasting
+                            if (anotherAnimal instanceof Cat) {
+                                Cat anotherCat = (Cat) anotherAnimal; // Safe downcast
+                                anotherCat.scratch();
+                            } else {
+                                System.out.println("anotherAnimal is not an instance of Cat.");
+                            }
+                        }
+                    }
 
 
 ASSOCIATION(gfg notes)
