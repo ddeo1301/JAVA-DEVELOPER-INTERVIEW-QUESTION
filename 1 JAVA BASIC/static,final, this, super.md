@@ -32,7 +32,8 @@ STATIC METHODS RESTRICTION :-
 
 FINAL KEYWORD
 
-  - used as an non access modifier applicable to variable, method or class which is used to restrict a user in Java and it cannot be modified or extended
+  - used as an non access modifier applicable to variable, method or class which is used to restrict a user in Java and it
+     cannot be modified or extended
   - Final variable -> To create constant variable. its value cannot be changed once assigned . we must initialize final variable else the compiler will throw compile time error
   - Final Methods -> Prevent Method Overloading. cannot be overridden by a subclass i.e it cannot be inherited by a subclass
   - Final Classes -> prevent Inheritances . eg :- Wrapper class like Integer, Float etc. cannot be extended by subclass
@@ -40,17 +41,14 @@ FINAL KEYWORD
   - must be initialized either at the time of declaration or in the constructor of the class
   - when a final variable is created inside a method/constructor/block, it is called local final variable, and it must initialize once where it is created
       
-      int [] arr = {1, 2, 3};
-      for(final int i : arr)  System.out.println(i + " ");  // 1 2 3
- - Since "i" variable goes out of scope with each iteration of the loop, it is redeclared each iteration, allowing the same token (i) to be used to represent multiple variables
-
-
+                  int [] arr = {1, 2, 3};
+                  for(final int i : arr)  System.out.println(i + " ");  // 1 2 3
+                
+ - Since "i" variable goes out of scope with each iteration of the loop, it is redeclared each iteration, allowing the same
+    token (i) to be used to represent multiple variables
 
 - FINAL KEYWORD is used to declare variables, methods or classes as unmodifiable
 - STATIC KEYWORD is used to declare class member(variables and methods) that belongs to class itself not individual objects
-
-
-
 
 
 THIS KEYWORD
@@ -59,16 +57,18 @@ THIS KEYWORD
  - Using this() to invoke the current class constructor (mainly constructor default mein i.e test(10. 20))
  - Using this keyword to return the current class instance ( Test get(){return this;}    obj.get().display)
  - Using this keyword  as method parameter
-      void display(Test obj) {....}
-      void get() {display(this);}
-      obj.get();
+   
+                  void display(Test obj) {....}
+                  void get() {display(this);}
+                  obj.get();
+               
  - Using this keyword to invoke the current class method
-       void display(){this.show();}
-       void show(....)    1st show wla fn execute then display wla execute hga
+ - 
+                   void display(){this.show();}
+                   void show(....)    1st show wla fn execute then display wla execute hga
+               
  - Using this keyword as an argument in the constructor call
-
   - helps in distinguish b/w instance and local variable with same name
-
   - overuse of this can make code harder to read and understand
   - using this in static context results in compile time error
    
