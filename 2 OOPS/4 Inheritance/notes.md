@@ -13,40 +13,40 @@ TYPES OF INHERITANCE:
      from it ....which method should D inherit
 
 
-interface A {
-    default void show() {
-        System.out.println("Interface A");
-    }
-}
+                interface A {
+                    default void show() {
+                        System.out.println("Interface A");
+                    }
+                }
+                
+                interface B extends A {
+                    default void show() {
+                        System.out.println("Interface B");
+                    }
+                }
+                
+                interface C extends A {
+                    default void show() {
+                        System.out.println("Interface C");
+                    }
+                }
 
-interface B extends A {
-    default void show() {
-        System.out.println("Interface B");
-    }
-}
-
-interface C extends A {
-    default void show() {
-        System.out.println("Interface C");
-    }
-}
-
-class D implements B, C {
-    @Override
-    public void show() {
-        // Resolving the ambiguity
-        B.super.show(); // or C.super.show()
-        System.out.println("Class D");
-        // Interface B
-        // Class D.  ......when If B.super.show()
-
-    }
-
-    public static void main(String[] args) {
-        D obj = new D();
-        obj.show(); // No ambiguity
-    }
-}
+                class D implements B, C {
+                    @Override
+                    public void show() {
+                        // Resolving the ambiguity
+                        B.super.show(); // or C.super.show()
+                        System.out.println("Class D");
+                        // Interface B
+                        // Class D.  ......when If B.super.show()
+                
+                    }
+                
+                    public static void main(String[] args) {
+                        D obj = new D();
+                        obj.show(); // No ambiguity
+                    }
+                }
 
 
 
