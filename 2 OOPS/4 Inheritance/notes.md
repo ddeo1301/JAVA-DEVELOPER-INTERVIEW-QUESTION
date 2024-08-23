@@ -53,13 +53,13 @@ TYPES OF INHERITANCE:
 IMPLEMENTING INHERITANCE IN JAVA
   - Unlike C++, Java doesnot provide an inheritance specifier like public, protected or private i.e we cannot specify mode of inheritance
     
-    class SuperClass{
-       // SuperClass fields and methods
-    }
-
-    class SubClass extends SuperClass{
-      // SUbclass fields and methods, it includes those inherited from SuperClass
-    }
+                  class SuperClass{
+                     // SuperClass fields and methods
+                  }
+              
+                  class SubClass extends SuperClass{
+                    // SUbclass fields and methods, it includes those inherited from SuperClass
+                  }
 
 
 SUPER KEYWORD
