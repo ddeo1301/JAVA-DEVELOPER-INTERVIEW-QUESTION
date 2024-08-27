@@ -1,7 +1,4 @@
- - al.stream()
-  .filter(...)
-  .forEach(System.out::println)
-
+ - al.stream().filter(...).forEach(System.out::println)
  - List<Integer> al = new ArrayList<>(Arrays.asList(5, 10, 15, 20));
 
 Advantage of stream()
@@ -16,9 +13,9 @@ Advantage of stream()
 LAMBDA  FUNCTION
   - Function Iterface :- which has only 1 abstract class
 
-  - interface Test{
-         void print();
-     }
+                     interface Test{
+                           void print();
+                       }
 
   - In Lambda fn we dont need to specify data type
   - parameter and return type is automatically inserted by lambda expression
@@ -96,48 +93,44 @@ MULTI PARAMETER
                 }
 
 
-  - al.forEach(x -> System.out.println(x))
-  - al.forEach(System.out::println)    :: method reference both static and method reference
-  - al.forEach(GFG(class) :: printSquare(uska method hai))
-
+         al.forEach(x -> System.out.println(x))
+         al.forEach(System.out::println)    :: method reference both static and method reference
+         al.forEach(GFG(class) :: printSquare(uska method hai))
+      
 
 
 STREAM APPLICATION
 
- - int m = Arrays.stream(arr)           getAsDouble()    
-                 .max()
-                 .getAsInt()
+  int m = Arrays.stream(arr).getAsDouble().max().getAsInt()
 
  - Max, Min and Avg return an optional class as a return value because if our streams are empty and there are no element then these fn are going to return null. so as signing NULL to integer is not a good idea
  - optional class is for non primitive type
  - comparator interface has non primitive
  
- - Stream.iterate(1, x-> x+1)                          iterate takes initial value here as 1
-         .filter(x -> x.toString().contains("5"))      output :- 5  15  25  35  45  50  51  52  53  54
-         .limit(10)
-         .forEach(System.out::println);
-
+          Stream.iterate(1, x-> x+1)                          iterate takes initial value here as 1
+                 .filter(x -> x.toString().contains("5"))      output :- 5  15  25  35  45  50  51  52  53  54
+                 .limit(10)
+                 .forEach(System.out::println);
+        
 
  - Begine with 'a' and ends with 'c' in lexicographical order
 
-            Arrays.stream(arr)
-                .filter(x -> x.startsWith("a"))
-                .filter(x -> x.endsWith("c"))
-                .sorted()
-                .forEach(System.out::println)
+                  Arrays.stream(arr).filter(x -> x.startsWith("a")).filter(x -> x.endsWith("c"))
+                      .sorted().forEach(System.out::println)
 
 collect method is used to collect stream data somewhere
 
 
 REDUCE 
    - allows you to transform a stream of elements into a single result.
-   - int sum = numbers.stream()
-                         .reduce(0, (a, b) -> a + b);  // STARTING INITIAL VALUE IS 0
-   - String concatenated = words.stream()
-                                   .reduce("", (a, b) -> a + " " + b);
-   -  Optional<Integer> max = numbers.stream()
-                                       .reduce((a, b) -> a > b ? a : b);  
-    // no initial value provided, the result is wrapped in an Optional.
+     
+               int sum = numbers.stream()
+                                    .reduce(0, (a, b) -> a + b);  // STARTING INITIAL VALUE IS 0
+               String concatenated = words.stream()
+                                              .reduce("", (a, b) -> a + " " + b);
+                Optional<Integer> max = numbers.stream()
+                                                  .reduce((a, b) -> a > b ? a : b);  
+               // no initial value provided, the result is wrapped in an Optional.
 
 
 STREAM APPLICATION
@@ -180,6 +173,6 @@ PARALLEL STREAM
  - parallel streams can provide performance benefits for large datasets with computationally intensive 
  operations on multi-core systems
 
-            words.parallelStream()
-                .filter(word -> word.length() > 5)
-                .forEach(System.out::println);
+                  words.parallelStream()
+                      .filter(word -> word.length() > 5)
+                      .forEach(System.out::println);
