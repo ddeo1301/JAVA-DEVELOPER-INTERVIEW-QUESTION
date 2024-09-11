@@ -12,3 +12,8 @@ To test maven deploy for Nexus:
 https://medium.com/@abhisheknanarkar/nexus-repository-manager-53fc29bfa592
 https://www.baeldung.com/maven-deploy-nexus
 
+STREAM API CODING QUESTION
+
+https://medium.com/illumination/java-8-stream-api-commonly-asked-interview-questions-2a57081044ef
+https://blog.devgenius.io/java-8-coding-and-programming-interview-questions-and-answers-62512c44f062
+https://github.com/rohitchavan-git?tab=repositories

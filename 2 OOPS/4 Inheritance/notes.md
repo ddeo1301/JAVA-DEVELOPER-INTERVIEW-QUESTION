@@ -9,20 +9,57 @@ TYPES OF INHERITANCE:
   2) Multilevel Inheritance
   3) Hierarical Inheritance
   4) Hybrid Inheritance
-  5) Multiple Inheritance
+  5) Multiple Inheritance:- Java dont support inorder to prevent DIAMOND PROBLEM as to avoid complexity and ambiguity arise
+     from it ....which method should D inherit
+
+
+                interface A {
+                    default void show() {
+                        System.out.println("Interface A");
+                    }
+                }
+                
+                interface B extends A {
+                    default void show() {
+                        System.out.println("Interface B");
+                    }
+                }
+                
+                interface C extends A {
+                    default void show() {
+                        System.out.println("Interface C");
+                    }
+                }
+
+                class D implements B, C {
+                    @Override
+                    public void show() {
+                        // Resolving the ambiguity
+                        B.super.show(); // or C.super.show()
+                        System.out.println("Class D");
+                        // Interface B
+                        // Class D.  ......when If B.super.show()
+                
+                    }
+                
+                    public static void main(String[] args) {
+                        D obj = new D();
+                        obj.show(); // No ambiguity
+                    }
+                }
+
 
 
 IMPLEMENTING INHERITANCE IN JAVA
   - Unlike C++, Java doesnot provide an inheritance specifier like public, protected or private i.e we cannot specify mode of inheritance
-  - Java doesnot support multiple inheritance
-
-    class SuperClass{
-       // SuperClass fields and methods
-    }
-
-    class SubClass extends SuperClass{
-      // SUbclass fields and methods, it includes those inherited from SuperClass
-    }
+    
+                  class SuperClass{
+                     // SuperClass fields and methods
+                  }
+              
+                  class SubClass extends SuperClass{
+                    // SUbclass fields and methods, it includes those inherited from SuperClass
+                  }
 
 
 SUPER KEYWORD
@@ -112,6 +149,61 @@ Cat c3 = (Cat) animal;
 - Ref Variable :- Parent          Object :- Child
    - for instance member(for fields/variables) --- Reference variable
    - function overriding  ---- Child Object
+
+                    class Animal {
+                        public void makeSound() {
+                            System.out.println("The animal makes a sound");
+                        }
+                    }
+                    
+                    class Cat extends Animal {
+                        @Override
+                        public void makeSound() {
+                            System.out.println("The cat meows");
+                        }
+                    
+                        public void scratch() {
+                            System.out.println("The cat scratches");
+                        }
+                    }
+                    
+                    class Dog extends Animal {
+                        @Override
+                        public void makeSound() {
+                            System.out.println("The dog barks");
+                        }
+                    }
+                    
+                    public class Main {
+                        public static void main(String[] args) {
+                            // This is legal: Upcasting
+                            Animal animal = new Cat(); // Cat is an Animal
+                            animal.makeSound(); // Output: The cat meows
+                    
+                            // This is illegal and will not compile
+                            // Cat an = new Animal(); // Uncommenting this line will cause a compile-time error
+                    
+                            // Correct way to downcast
+                            if (animal instanceof Cat) {
+                                Cat cat = (Cat) animal; // Safe downcast
+                                cat.scratch(); // Output: The cat scratches
+                            } else {
+                                System.out.println("The animal is not a Cat.");
+                            }
+                    
+                            // Example of unsafe downcasting
+                            Animal anotherAnimal = new Dog();
+                            // Cat anotherCat = (Cat) anotherAnimal; // This would throw a ClassCastException at runtime
+                    
+                            // Checking the type before downcasting
+                            if (anotherAnimal instanceof Cat) {
+                                Cat anotherCat = (Cat) anotherAnimal; // Safe downcast
+                                anotherCat.scratch();
+                            } else {
+                                System.out.println("anotherAnimal is not an instance of Cat.");
+                            }
+                        }
+                    }
 
 
 ASSOCIATION(gfg notes)

@@ -91,6 +91,27 @@ NESTED TRY
 
 - CUSTOM EXCEPTION :- we create on our own and used it
 
+                        // A class that represents a user-defined exception
+                        class MyException extends Exception {
+                            public MyException(String message) {
+                                // Call constructor of parent Exception
+                                super(message);
+                            }
+                        }
+                        
+                        // A class that uses the custom exception
+                        public class Main {
+                            public static void main(String[] args) {
+                                try {
+                                    // Throw an object of user-defined exception
+                                    throw new MyException("Custom exception occurred");
+                                } catch (MyException ex) {
+                                    System.out.println("Caught");
+                                    System.out.println(ex.getMessage());
+                                }
+                            }
+                        }
+
 
 - Java Exception Propagation
      - exception is 1st thrown from top of the stack -> if nt caught, it drops the call stack to previous method
