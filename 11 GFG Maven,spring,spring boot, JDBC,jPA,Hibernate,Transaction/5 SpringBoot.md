@@ -2,7 +2,10 @@
    - Open source Java based framework used to create microservices in minutes.
    - Minimum configurations, embedded servers etc.
    - Spring Boot is a framework built on top of the Spring Framework, designed to simplify the development of 
-    Spring-based applications. 
+    Spring-based applications.
+   - Beans is an object that is managed by Spring IOC(Inversion of control) container. They r fundamental part of spring
+      framework, as they represent the building blocks of ur application, allowing spring to manage dependencies,
+      lifecycles and configuration  
 
 **Why Use Spring Boot?**
  1) Spring Boot reduces the complexity of configuring Spring applications and speeds up the development
